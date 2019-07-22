@@ -1,0 +1,4 @@
+sudo docker-compose build
+sudo docker-compose run app sh -c "django-admin.py startproject app ."   # create django project inside app directory with name app 
+
+
