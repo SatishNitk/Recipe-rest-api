@@ -1,4 +1,6 @@
 sudo docker-compose build
 sudo docker-compose run app sh -c "django-admin.py startproject app ."   # create django project inside app directory with name app 
-
-
+sudo docker-compose run app sh -c "python manage.py test"   # to execute unit  test inside container
+sudo docker-compose run app sh -c "python manage.py test && flake8"   # execute unit test with flake8  ... so check for pep8 condition
+sudo docker-compose run app sh -c "python manage.py startapp core"  # create a app in django
+sudo docker-compose run app sh -c "python manage.py makemigrations core "  # run makemigrations on core app
